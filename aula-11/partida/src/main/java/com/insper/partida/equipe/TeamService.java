@@ -41,6 +41,11 @@ public class  TeamService {
             teamRepository.delete(team);
         }
 
+<<<<<<< HEAD
+=======
+        // verificar se o time existe
+
+>>>>>>> 3bbd8d6bba5acf0f23e04cffb5553ac8d68b4204
     }
 
     public Team getTeam(String identifier) {

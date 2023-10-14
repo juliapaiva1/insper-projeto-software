@@ -51,6 +51,10 @@ public class GameController {
         return gameService.getScoreTeam(id);
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3bbd8d6bba5acf0f23e04cffb5553ac8d68b4204
     @PostMapping("/generateData")
     public void generateData() {
         gameService.generateData();

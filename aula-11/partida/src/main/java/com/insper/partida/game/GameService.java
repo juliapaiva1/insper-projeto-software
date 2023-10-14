@@ -50,9 +50,17 @@ public class GameService {
         Team teamV = teamService.getTeam(saveGameDTO.getAway());
 
         if (teamM == null || teamV == null) {
+<<<<<<< HEAD
             return null;
         }
 
+=======
+            return null; // enviar a mensagem de erro correta
+        }
+
+        // validar se o time mandante é diferente do visitante
+
+>>>>>>> 3bbd8d6bba5acf0f23e04cffb5553ac8d68b4204
         Game game = new Game();
         game.setIdentifier(UUID.randomUUID().toString());
         game.setHome(teamM.getIdentifier());
@@ -71,6 +79,11 @@ public class GameService {
     public GameReturnDTO editGame(String identifier, EditGameDTO editGameDTO) {
         Game gameBD = gameRepository.findByIdentifier(identifier);
 
+<<<<<<< HEAD
+=======
+        // verificasr se o jogo existe
+
+>>>>>>> 3bbd8d6bba5acf0f23e04cffb5553ac8d68b4204
         gameBD.setScoreAway(editGameDTO.getScoreAway());
         gameBD.setScoreHome(editGameDTO.getScoreHome());
         gameBD.setAttendance(editGameDTO.getAttendance());
@@ -85,6 +98,10 @@ public class GameService {
         if (gameBD != null) {
             gameRepository.delete(gameBD);
         }
+<<<<<<< HEAD
+=======
+        //verificar se o jogo existe
+>>>>>>> 3bbd8d6bba5acf0f23e04cffb5553ac8d68b4204
     }
 
     public Integer getScoreTeam(String identifier) {
@@ -94,6 +111,11 @@ public class GameService {
     }
 
     public GameReturnDTO getGame(String identifier) {
+<<<<<<< HEAD
+=======
+
+        // verificar se o gaame existe
+>>>>>>> 3bbd8d6bba5acf0f23e04cffb5553ac8d68b4204
         return GameReturnDTO.covert(gameRepository.findByIdentifier(identifier));
     }
 
